@@ -13,4 +13,5 @@ def rule_url_gen(class_name, each_rule):
     list_name = rule_url.split("/")
     list_name = list_name[-1] + ".list"
     rule_set_content = "ruleset=" + class_name + "," + rule_url + "/" + list_name + "\n"
+    rule_set_content=rule_set_content.replace("/github.com/","/raw.githubusercontent.com/").replace("/tree/","/")
     return rule_set_content
